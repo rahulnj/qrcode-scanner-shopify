@@ -22,13 +22,8 @@ import {
   useNavigate,
 } from '@shopify/app-bridge-react'
 import { ImageMajor, AlertMinor } from '@shopify/polaris-icons'
-
-/* Import the useAuthenticatedFetch hook included in the Node app template */
 import { useAuthenticatedFetch, useShopifyQuery } from '../hooks'
-
-/* Import custom hooks for forms */
 import { useForm, useField, notEmptyString } from '@shopify/react-form'
-
 import { gql } from 'graphql-request'
 
 const NO_DISCOUNT_OPTION = { label: 'No discount', value: '' }
@@ -201,11 +196,6 @@ export function QRCodeForm({ QRCode: InitialQRCode }) {
     discountCode.onChange(DISCOUNT_CODES[id] || '')
   }, [])
 
-  /*
-    This function is called when a user clicks "Select product" or cancels the ProductPicker.
-
-    It switches between a show and hide state.
-  */
   const toggleResourcePicker = useCallback(
     () => setShowResourcePicker(!showResourcePicker),
     [showResourcePicker]
