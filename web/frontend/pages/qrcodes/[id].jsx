@@ -39,7 +39,7 @@ export default function QRCodeEdit() {
         <Layout>
           <Layout.Section>
             <Card sectioned title='Title'>
-              <SkeletonBodyText />
+              <SkeletonBodyText lines={2} />
             </Card>
             <Card title='Product'>
               <Card.Section>
